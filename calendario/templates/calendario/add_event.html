@@ -1,0 +1,27 @@
+{% extends "calendario/base.html" %}
+
+
+{% block titulo %} Calendario {% endblock %}
+
+{% block contenido %}
+<center>
+<h1>Agregar evento a la base de datos</h1>
+<br/><br/>
+{% if submitted %}
+    Su evento se ha agregado exitosamente!
+
+{% else %}
+
+    <form action="" method=POST>
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <a name="" id="" class="btn btn-primary" href="#" role="button">Submit</a>
+
+
+    </form>
+    
+{% endif %}
+
+</center>
+{% endblock %}

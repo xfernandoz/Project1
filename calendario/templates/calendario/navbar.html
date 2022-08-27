@@ -14,7 +14,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #166faf;">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="{% url 'main' %}">
           <img src="{% static 'img/instituto_barranqueras_logo2.png' %}" width="30" height="30" alt="">
         </a>
@@ -22,9 +22,7 @@
             aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'main' %}">Inicio <span class="visually-hidden">(current)</span></a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
                 </li>
@@ -37,11 +35,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'agregar-evento' %}">Evento <span class="visually-hidden">(current)</span></a>
-                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Calendario</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meses</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                         <a class="dropdown-item" href="{% url 'calendario' '2022' 'July' %}">Mes anterior</a>
                         <a class="dropdown-item" href="{% url 'calendario' %}">Mes actual</a>
